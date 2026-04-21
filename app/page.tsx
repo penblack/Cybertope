@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function LandingPage() {
@@ -5,7 +6,18 @@ export default function LandingPage() {
     <div className="min-h-screen bg-neutral-950 text-white">
       {/* Nav */}
       <nav className="border-b border-neutral-800 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
-        <span className="text-lg font-bold tracking-tight">Cybertope</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/cybertope-logo.png"
+            alt="Cybertope logo"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+            priority
+          />
+          <span className="text-lg font-bold tracking-tight">Cybertope</span>
+        </Link>
+
         <div className="flex items-center gap-4">
           <Link href="/leaderboard" className="text-sm text-neutral-400 hover:text-white transition-colors">
             Leaderboard
@@ -68,6 +80,7 @@ export default function LandingPage() {
               context exhaustion, and system prompt extraction.
             </p>
           </div>
+
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
             <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">
               OWASP LLM07
