@@ -22,11 +22,16 @@ export const assessmentJob = inngest.createFunction(
   { id: 'run-assessment', triggers: [{ event: 'assessment/start' }] },
   async ({ event }) => {
     const { submissionId, assessmentRunId } = event.data as { submissionId: string; assessmentRunId: string };
+
+    console.log('[assessment/start] submissionId:', submissionId, 'assessmentRunId:', assessmentRunId);
+    console.log('[assessment/start] SUPABASE_URL set:', !!process.env.NEXT_PUBLIC_SUPABASE_URL, 'SERVICE_ROLE_KEY set:', !!process.env.SUPABASE_SERVICE_ROLE_KEY);
+
     const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 
     // Get submission
-    const { data: submission } = await supabase.from('submissions').select('*').eq('id', submissionId).single();
-    if (!submission) throw new Error('Submission not found');
+    const { data: submission, error: subError } = await supabase.from('submissions').select('*').eq('id', submissionId).single();
+    console.log('[assessment/start] submission lookup — found:', !!submission, 'error:', subError?.message ?? null);
+    if (!submission) throw new Error(`Submission not found: id=${submissionId} dbError=${subError?.message}`);
 
     // Mark running
     await supabase.from('assessment_runs').update({ status: 'running' }).eq('id', assessmentRunId);
