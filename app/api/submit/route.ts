@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@supabase/auth-helpers-nextjs';
+import { createClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 import { validateEndpointUrl, callEndpoint } from '@/lib/runner/caller';
 import { inngest } from '@/lib/runner/inngest-client';
+
+const adminClient = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
 
 const submitSchema = z.object({
   model_name: z.string().min(1, 'Model name is required'),
@@ -85,7 +91,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Create submission
-  const { data: submission, error: submissionError } = await supabase
+  const { data: submission, error: submissionError } = await adminClient
     .from('submissions')
     .insert({
       user_id: session.user.id,
@@ -109,7 +115,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Create assessment run
-  const { data: assessmentRun, error: runError } = await supabase
+  const { data: assessmentRun, error: runError } = await adminClient
     .from('assessment_runs')
     .insert({
       submission_id: submission.id,
