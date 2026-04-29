@@ -32,7 +32,7 @@ body {
   position: absolute;
   width: 120%;
   height: 65%;
-  top: -25%;
+  bottom: -25%;
   left: -10%;
   background: radial-gradient(ellipse at center, rgba(111, 45, 235, 0.5) 0%, rgba(111, 45, 235, 0.15) 40%, transparent 68%);
   filter: blur(60px);
@@ -42,7 +42,7 @@ body {
   position: absolute;
   width: 65%;
   height: 55%;
-  top: -15%;
+  bottom: -15%;
   right: -5%;
   background: radial-gradient(ellipse at center, rgba(225, 55, 130, 0.35) 0%, transparent 62%);
   filter: blur(70px);
@@ -52,7 +52,7 @@ body {
   position: absolute;
   width: 55%;
   height: 50%;
-  top: -10%;
+  bottom: -10%;
   left: -5%;
   background: radial-gradient(ellipse at center, rgba(40, 65, 210, 0.3) 0%, transparent 65%);
   filter: blur(80px);
