@@ -86,7 +86,7 @@ export default function SubmitPage() {
     `w-full bg-neutral-800 border ${err ? 'border-red-600' : 'border-neutral-700'} rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent`;
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
+    <div className="min-h-screen text-white">
       <nav className="border-b border-neutral-800 px-6 py-4">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <Link href="/" className="text-lg font-bold">Cybertope</Link>

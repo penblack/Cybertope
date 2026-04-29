@@ -28,7 +28,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="aurora-layer" aria-hidden="true">
+          <div className="aurora-orb-1" />
+          <div className="aurora-orb-2" />
+          <div className="aurora-orb-3" />
+        </div>
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

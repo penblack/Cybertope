@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0d0914;
+  --foreground: #ededed;
 }
 
 body {
@@ -24,4 +17,43 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Sentry-style aurora background */
+.aurora-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.aurora-orb-1 {
+  position: absolute;
+  width: 120%;
+  height: 65%;
+  top: -25%;
+  left: -10%;
+  background: radial-gradient(ellipse at center, rgba(111, 45, 235, 0.5) 0%, rgba(111, 45, 235, 0.15) 40%, transparent 68%);
+  filter: blur(60px);
+}
+
+.aurora-orb-2 {
+  position: absolute;
+  width: 65%;
+  height: 55%;
+  top: -15%;
+  right: -5%;
+  background: radial-gradient(ellipse at center, rgba(225, 55, 130, 0.35) 0%, transparent 62%);
+  filter: blur(70px);
+}
+
+.aurora-orb-3 {
+  position: absolute;
+  width: 55%;
+  height: 50%;
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(ellipse at center, rgba(40, 65, 210, 0.3) 0%, transparent 65%);
+  filter: blur(80px);
 }

@@ -72,7 +72,7 @@ export default function AssessmentPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-neutral-950 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-neutral-400 text-sm">Loading…</div>
       </div>
     );
@@ -80,7 +80,7 @@ export default function AssessmentPage() {
 
   if (!run) {
     return (
-      <div className="min-h-screen bg-neutral-950 flex items-center justify-center text-white">
+      <div className="min-h-screen flex items-center justify-center text-white">
         <div className="text-center">
           <p className="text-neutral-400 mb-4">Assessment not found.</p>
           <Link href="/dashboard" className="text-indigo-400 hover:text-indigo-300 text-sm">
@@ -95,7 +95,7 @@ export default function AssessmentPage() {
   const isFailed = run.status === 'failed';
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
+    <div className="min-h-screen text-white">
       <nav className="border-b border-neutral-800 px-6 py-4">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <Link href="/" className="text-lg font-bold">Cybertope</Link>
