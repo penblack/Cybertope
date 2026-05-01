@@ -95,17 +95,42 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-neutral-800 py-8 text-center text-sm text-neutral-600">
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <Image
-            src="/Cybertope-beetle-logo.png"
-            alt="Cybertope beetle logo"
-            width={32}
-            height={32}
-            className="h-8 w-8 opacity-70"
-          />
+      <footer className="border-t border-neutral-800 px-6 py-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-6">
+          {/* Left: brand */}
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/cybertope-logo.png"
+              alt="Cybertope logo"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+            />
+            <span className="text-sm font-semibold text-neutral-400">Cybertope</span>
+          </Link>
+
+          {/* Center: nav links */}
+          <div className="flex items-center gap-6 text-sm text-neutral-500">
+            <Link href="/leaderboard" className="hover:text-neutral-300 transition-colors">Leaderboard</Link>
+            <Link href="/submit" className="hover:text-neutral-300 transition-colors">Submit Model</Link>
+            <Link href="/login" className="hover:text-neutral-300 transition-colors">Sign in</Link>
+          </div>
+
+          {/* Right: beetle mascot */}
+          <div style={{ opacity: 0.85 }}>
+            <Image
+              src="/Cybertope-beetle-logo.png"
+              alt="Cybertope beetle mascot"
+              width={120}
+              height={120}
+              style={{ objectFit: 'contain', height: '90px', width: 'auto' }}
+            />
+          </div>
         </div>
-        Cybertope · AI Security Benchmark Platform
+
+        <p className="text-center text-xs text-neutral-600 mt-6">
+          © 2026 Cybertope · AI Security Benchmark Platform
+        </p>
       </footer>
     </div>
   );
