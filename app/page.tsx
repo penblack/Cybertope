@@ -96,6 +96,15 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-8 text-center text-sm text-neutral-600">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <Image
+            src="/Cybertope-beetle-logo.png"
+            alt="Cybertope beetle logo"
+            width={32}
+            height={32}
+            className="h-8 w-8 opacity-70"
+          />
+        </div>
         Cybertope · AI Security Benchmark Platform
       </footer>
     </div>
