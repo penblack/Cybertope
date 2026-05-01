@@ -108,27 +108,24 @@ export default function LandingPage() {
           />
         </svg>
 
-        {/* Beetle rolling ball — sitting on the dune at 20% from left */}
+        {/* Beetle pushing ball — static, sitting on dune slope */}
         <div
-          className="footer-mascot-group"
           style={{
             position: 'absolute',
-            left: '20%',
-            bottom: 0,
+            left: '15%',
+            bottom: '-10px',
             zIndex: 10,
             pointerEvents: 'none',
             display: 'flex',
             alignItems: 'flex-end',
-            gap: '4px',
           }}
         >
-          {/* Icosahedral ball — 60px */}
+          {/* Icosahedral ball — 50px */}
           <svg
             viewBox="0 0 100 100"
-            width="60"
-            height="60"
-            className="footer-mascot-spin"
-            style={{ flexShrink: 0 }}
+            width="50"
+            height="50"
+            style={{ flexShrink: 0, display: 'block' }}
           >
             <circle cx="50" cy="50" r="47" fill="#120d22" />
             <path d="M50,10 A40,40 0 0,1 85,30 L72,38 A25,25 0 0,0 50,25 Z" fill="#9088ec" />
@@ -149,17 +146,18 @@ export default function LandingPage() {
             <ellipse cx="37" cy="20" rx="10" ry="5" fill="white" opacity="0.1" transform="rotate(-25 37 20)" />
           </svg>
 
-          {/* Beetle — flipped to face left toward the ball */}
+          {/* Beetle — flipped to face left, horn touching ball */}
           <img
             src="/beetle-logo.png"
             alt=""
             aria-hidden="true"
             style={{
-              height: '70px',
+              height: '85px',
               width: 'auto',
-              opacity: 0.88,
+              opacity: 1,
               flexShrink: 0,
               transform: 'scaleX(-1)',
+              marginLeft: '-8px',
             }}
           />
         </div>

@@ -19,28 +19,6 @@ body {
   }
 }
 
-/* Footer beetle + ball animation */
-@keyframes ball-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-@keyframes group-bob {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-3px); }
-}
-
-.footer-mascot-group {
-  animation: group-bob 3s ease-in-out infinite;
-}
-
-.footer-mascot-spin {
-  animation: ball-spin 8s linear infinite;
-  transform-origin: center;
-  transform-box: fill-box;
-  display: block;
-}
-
 /* Sentry-style aurora background */
 .aurora-layer {
   position: fixed;
