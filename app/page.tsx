@@ -96,6 +96,38 @@ export default function LandingPage() {
 
       {/* Wave divider — composition sits inside here at bottom: 0 */}
       <div style={{ lineHeight: 0, marginBottom: '-1px', position: 'relative' }}>
+
+        {/* Stars */}
+        {([
+          { left: '5%',  top: 22 }, { left: '12%', top: 10 }, { left: '21%', top: 18 },
+          { left: '34%', top: 6  }, { left: '46%', top: 26 }, { left: '57%', top: 12 },
+          { left: '67%', top: 28 }, { left: '74%', top: 8  }, { left: '84%', top: 20 },
+          { left: '93%', top: 14 },
+        ] as { left: string; top: number }[]).map((s, i) => (
+          <div key={i} style={{
+            position: 'absolute', left: s.left, top: s.top,
+            width: i % 4 === 0 ? '2.5px' : '1.5px',
+            height: i % 4 === 0 ? '2.5px' : '1.5px',
+            borderRadius: '50%',
+            backgroundColor: 'white',
+            opacity: 0.35 + (i % 3) * 0.12,
+            zIndex: 5,
+          }} />
+        ))}
+
+        {/* Moon — crescent using SVG mask */}
+        <div style={{ position: 'absolute', right: '22%', top: '7px', zIndex: 5, pointerEvents: 'none' }}>
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <defs>
+              <mask id="crescent-mask">
+                <circle cx="9" cy="9" r="7" fill="white" />
+                <circle cx="13" cy="7" r="6" fill="black" />
+              </mask>
+            </defs>
+            <circle cx="9" cy="9" r="7" fill="rgba(255,248,190,0.7)" mask="url(#crescent-mask)" />
+          </svg>
+        </div>
+
         <svg
           viewBox="0 0 1440 80"
           xmlns="http://www.w3.org/2000/svg"
