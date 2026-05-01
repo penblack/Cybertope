@@ -117,13 +117,13 @@ export default function LandingPage() {
           </div>
 
           {/* Right: beetle mascot */}
-          <div style={{ opacity: 0.85 }}>
+          <div style={{ opacity: 0.85, background: 'transparent' }}>
             <Image
               src="/beetle-mascot.png"
               alt="Cybertope beetle mascot"
               width={120}
               height={120}
-              style={{ objectFit: 'contain', height: '90px', width: 'auto' }}
+              style={{ objectFit: 'contain', height: '90px', width: 'auto', background: 'transparent' }}
             />
           </div>
         </div>
