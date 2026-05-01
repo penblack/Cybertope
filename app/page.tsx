@@ -182,8 +182,8 @@ export default function LandingPage() {
             <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-neutral-500 justify-center">
               <Link href="/leaderboard" className="hover:text-neutral-300 transition-colors">Leaderboard</Link>
               <Link href="/submit" className="hover:text-neutral-300 transition-colors">Submit Model</Link>
-              <Link href="#" className="hover:text-neutral-300 transition-colors">Documentation</Link>
-              <Link href="#" className="hover:text-neutral-300 transition-colors">About</Link>
+              <Link href="/docs" className="hover:text-neutral-300 transition-colors">Documentation</Link>
+              <Link href="/about" className="hover:text-neutral-300 transition-colors">About</Link>
             </div>
 
             {/* Right: social icons */}
