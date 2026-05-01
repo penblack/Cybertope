@@ -99,10 +99,11 @@ export default function LandingPage() {
 
         {/* Stars */}
         {([
-          { left: '5%',  top: 22 }, { left: '12%', top: 10 }, { left: '21%', top: 18 },
-          { left: '34%', top: 6  }, { left: '46%', top: 26 }, { left: '57%', top: 12 },
-          { left: '67%', top: 28 }, { left: '74%', top: 8  }, { left: '84%', top: 20 },
-          { left: '93%', top: 14 },
+          { left: '3%',  top: 18 }, { left: '9%',  top: 6  }, { left: '17%', top: 28 },
+          { left: '24%', top: 12 }, { left: '29%', top: 24 }, { left: '38%', top: 4  },
+          { left: '44%', top: 20 }, { left: '51%', top: 10 }, { left: '58%', top: 30 },
+          { left: '63%', top: 7  }, { left: '70%', top: 22 }, { left: '77%', top: 14 },
+          { left: '81%', top: 28 }, { left: '88%', top: 5  }, { left: '95%', top: 18 },
         ] as { left: string; top: number }[]).map((s, i) => (
           <div key={i} style={{
             position: 'absolute', left: s.left, top: s.top,
