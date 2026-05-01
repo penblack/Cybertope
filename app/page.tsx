@@ -116,49 +116,13 @@ export default function LandingPage() {
             bottom: '-10px',
             zIndex: 10,
             pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'flex-end',
           }}
         >
-          {/* Icosahedral ball — 50px */}
-          <svg
-            viewBox="0 0 100 100"
-            width="50"
-            height="50"
-            style={{ flexShrink: 0, display: 'block' }}
-          >
-            <circle cx="50" cy="50" r="47" fill="#120d22" />
-            <path d="M50,10 A40,40 0 0,1 85,30 L72,38 A25,25 0 0,0 50,25 Z" fill="#9088ec" />
-            <path d="M85,30 A40,40 0 0,1 85,70 L72,62 A25,25 0 0,0 72,38 Z" fill="#7060d8" />
-            <path d="M85,70 A40,40 0 0,1 50,90 L50,75 A25,25 0 0,0 72,62 Z" fill="#5848c0" />
-            <path d="M50,90 A40,40 0 0,1 15,70 L28,62 A25,25 0 0,0 50,75 Z" fill="#3d2fa0" />
-            <path d="M15,70 A40,40 0 0,1 15,30 L28,38 A25,25 0 0,0 28,62 Z" fill="#4840b0" />
-            <path d="M15,30 A40,40 0 0,1 50,10 L50,25 A25,25 0 0,0 28,38 Z" fill="#6858d0" />
-            <line x1="50" y1="10" x2="50" y2="25" stroke="#c0b8ff" strokeWidth="0.8" opacity="0.55" />
-            <line x1="85" y1="30" x2="72" y2="38" stroke="#9080e0" strokeWidth="0.8" opacity="0.45" />
-            <line x1="85" y1="70" x2="72" y2="62" stroke="#6858c0" strokeWidth="0.8" opacity="0.35" />
-            <line x1="50" y1="90" x2="50" y2="75" stroke="#4838a0" strokeWidth="0.8" opacity="0.35" />
-            <line x1="15" y1="70" x2="28" y2="62" stroke="#4838a8" strokeWidth="0.8" opacity="0.35" />
-            <line x1="15" y1="30" x2="28" y2="38" stroke="#7060c8" strokeWidth="0.8" opacity="0.45" />
-            <circle cx="50" cy="50" r="25" fill="#0d0914" />
-            <circle cx="50" cy="50" r="25" fill="none" stroke="#6d5fd4" strokeWidth="1.2" opacity="0.65" />
-            <circle cx="50" cy="50" r="47" fill="none" stroke="#5040b8" strokeWidth="0.5" opacity="0.3" />
-            <ellipse cx="37" cy="20" rx="10" ry="5" fill="white" opacity="0.1" transform="rotate(-25 37 20)" />
-          </svg>
-
-          {/* Beetle — flipped to face left, horn touching ball */}
           <img
             src="/beetle-logo.png"
             alt=""
             aria-hidden="true"
-            style={{
-              height: '85px',
-              width: 'auto',
-              opacity: 1,
-              flexShrink: 0,
-              transform: 'scaleX(-1)',
-              marginLeft: '-8px',
-            }}
+            style={{ height: '85px', width: 'auto', opacity: 1, flexShrink: 0 }}
           />
         </div>
       </div>
