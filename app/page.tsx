@@ -119,7 +119,7 @@ export default function LandingPage() {
           {/* Right: beetle mascot */}
           <div style={{ opacity: 0.85 }}>
             <Image
-              src="/Cybertope-beetle-logo.png"
+              src="/beetle-mascot.png"
               alt="Cybertope beetle mascot"
               width={120}
               height={120}
