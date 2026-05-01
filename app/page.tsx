@@ -94,8 +94,8 @@ export default function LandingPage() {
         </div>
       </main>
 
-      {/* Wave divider — fill matches footer background */}
-      <div style={{ lineHeight: 0, marginBottom: '-1px' }}>
+      {/* Wave divider — composition sits inside here at bottom: 0 */}
+      <div style={{ lineHeight: 0, marginBottom: '-1px', position: 'relative' }}>
         <svg
           viewBox="0 0 1440 80"
           xmlns="http://www.w3.org/2000/svg"
@@ -107,6 +107,62 @@ export default function LandingPage() {
             fill="#08060f"
           />
         </svg>
+
+        {/* Beetle rolling ball — sitting on the dune at 20% from left */}
+        <div
+          className="footer-mascot-group"
+          style={{
+            position: 'absolute',
+            left: '20%',
+            bottom: 0,
+            zIndex: 10,
+            pointerEvents: 'none',
+            display: 'flex',
+            alignItems: 'flex-end',
+            gap: '4px',
+          }}
+        >
+          {/* Icosahedral ball — 60px */}
+          <svg
+            viewBox="0 0 100 100"
+            width="60"
+            height="60"
+            className="footer-mascot-spin"
+            style={{ flexShrink: 0 }}
+          >
+            <circle cx="50" cy="50" r="47" fill="#120d22" />
+            <path d="M50,10 A40,40 0 0,1 85,30 L72,38 A25,25 0 0,0 50,25 Z" fill="#9088ec" />
+            <path d="M85,30 A40,40 0 0,1 85,70 L72,62 A25,25 0 0,0 72,38 Z" fill="#7060d8" />
+            <path d="M85,70 A40,40 0 0,1 50,90 L50,75 A25,25 0 0,0 72,62 Z" fill="#5848c0" />
+            <path d="M50,90 A40,40 0 0,1 15,70 L28,62 A25,25 0 0,0 50,75 Z" fill="#3d2fa0" />
+            <path d="M15,70 A40,40 0 0,1 15,30 L28,38 A25,25 0 0,0 28,62 Z" fill="#4840b0" />
+            <path d="M15,30 A40,40 0 0,1 50,10 L50,25 A25,25 0 0,0 28,38 Z" fill="#6858d0" />
+            <line x1="50" y1="10" x2="50" y2="25" stroke="#c0b8ff" strokeWidth="0.8" opacity="0.55" />
+            <line x1="85" y1="30" x2="72" y2="38" stroke="#9080e0" strokeWidth="0.8" opacity="0.45" />
+            <line x1="85" y1="70" x2="72" y2="62" stroke="#6858c0" strokeWidth="0.8" opacity="0.35" />
+            <line x1="50" y1="90" x2="50" y2="75" stroke="#4838a0" strokeWidth="0.8" opacity="0.35" />
+            <line x1="15" y1="70" x2="28" y2="62" stroke="#4838a8" strokeWidth="0.8" opacity="0.35" />
+            <line x1="15" y1="30" x2="28" y2="38" stroke="#7060c8" strokeWidth="0.8" opacity="0.45" />
+            <circle cx="50" cy="50" r="25" fill="#0d0914" />
+            <circle cx="50" cy="50" r="25" fill="none" stroke="#6d5fd4" strokeWidth="1.2" opacity="0.65" />
+            <circle cx="50" cy="50" r="47" fill="none" stroke="#5040b8" strokeWidth="0.5" opacity="0.3" />
+            <ellipse cx="37" cy="20" rx="10" ry="5" fill="white" opacity="0.1" transform="rotate(-25 37 20)" />
+          </svg>
+
+          {/* Beetle — flipped to face left toward the ball */}
+          <img
+            src="/beetle-logo.png"
+            alt=""
+            aria-hidden="true"
+            style={{
+              height: '70px',
+              width: 'auto',
+              opacity: 0.88,
+              flexShrink: 0,
+              transform: 'scaleX(-1)',
+            }}
+          />
+        </div>
       </div>
 
       {/* Footer */}
@@ -116,72 +172,6 @@ export default function LandingPage() {
           position: 'relative',
         }}
       >
-        {/* Beetle pushing icosahedral ball — straddling the leftmost dune peak */}
-        <div
-          className="footer-mascot-group"
-          style={{
-            position: 'absolute',
-            left: 'calc(25% - 36px)',
-            top: '-72px',
-            zIndex: 10,
-            pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'flex-end',
-            gap: '0px',
-          }}
-        >
-          {/* Faceted ring ball — 6-segment torus, shaded top-to-bottom */}
-          <svg
-            viewBox="0 0 100 100"
-            width="72"
-            height="72"
-            className="footer-mascot-spin"
-            style={{ flexShrink: 0 }}
-          >
-            {/* Dark base */}
-            <circle cx="50" cy="50" r="47" fill="#120d22" />
-
-            {/* Ring facets — outer r=40, inner r=25, 6 × 60° segments */}
-            {/* Top — brightest */}
-            <path d="M50,10 A40,40 0 0,1 85,30 L72,38 A25,25 0 0,0 50,25 Z" fill="#9088ec" />
-            {/* Top-right */}
-            <path d="M85,30 A40,40 0 0,1 85,70 L72,62 A25,25 0 0,0 72,38 Z" fill="#7060d8" />
-            {/* Bottom-right */}
-            <path d="M85,70 A40,40 0 0,1 50,90 L50,75 A25,25 0 0,0 72,62 Z" fill="#5848c0" />
-            {/* Bottom — darkest */}
-            <path d="M50,90 A40,40 0 0,1 15,70 L28,62 A25,25 0 0,0 50,75 Z" fill="#3d2fa0" />
-            {/* Bottom-left */}
-            <path d="M15,70 A40,40 0 0,1 15,30 L28,38 A25,25 0 0,0 28,62 Z" fill="#4840b0" />
-            {/* Top-left */}
-            <path d="M15,30 A40,40 0 0,1 50,10 L50,25 A25,25 0 0,0 28,38 Z" fill="#6858d0" />
-
-            {/* Facet divider lines */}
-            <line x1="50" y1="10" x2="50" y2="25" stroke="#c0b8ff" strokeWidth="0.8" opacity="0.55" />
-            <line x1="85" y1="30" x2="72" y2="38" stroke="#9080e0" strokeWidth="0.8" opacity="0.45" />
-            <line x1="85" y1="70" x2="72" y2="62" stroke="#6858c0" strokeWidth="0.8" opacity="0.35" />
-            <line x1="50" y1="90" x2="50" y2="75" stroke="#4838a0" strokeWidth="0.8" opacity="0.35" />
-            <line x1="15" y1="70" x2="28" y2="62" stroke="#4838a8" strokeWidth="0.8" opacity="0.35" />
-            <line x1="15" y1="30" x2="28" y2="38" stroke="#7060c8" strokeWidth="0.8" opacity="0.45" />
-
-            {/* Inner hole */}
-            <circle cx="50" cy="50" r="25" fill="#0d0914" />
-            {/* Inner rim glow */}
-            <circle cx="50" cy="50" r="25" fill="none" stroke="#6d5fd4" strokeWidth="1.2" opacity="0.65" />
-            {/* Outer rim */}
-            <circle cx="50" cy="50" r="47" fill="none" stroke="#5040b8" strokeWidth="0.5" opacity="0.3" />
-
-            {/* Top-left sheen */}
-            <ellipse cx="37" cy="20" rx="10" ry="5" fill="white" opacity="0.1" transform="rotate(-25 37 20)" />
-          </svg>
-
-          {/* Beetle pushing from behind */}
-          <img
-            src="/beetle-logo.png"
-            alt=""
-            aria-hidden="true"
-            style={{ height: '62px', width: 'auto', opacity: 0.88, marginBottom: '2px', flexShrink: 0 }}
-          />
-        </div>
 
         <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
           {/* Main row */}
