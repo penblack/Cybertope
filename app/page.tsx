@@ -155,7 +155,7 @@ export default function LandingPage() {
             src="/beetle-logo.png"
             alt=""
             aria-hidden="true"
-            style={{ height: '170px', width: 'auto', opacity: 1, flexShrink: 0, transform: 'scaleX(-1) rotate(10deg)' }}
+            style={{ height: '102px', width: 'auto', opacity: 1, flexShrink: 0, transform: 'scaleX(-1) rotate(10deg)' }}
           />
         </div>
       </div>
